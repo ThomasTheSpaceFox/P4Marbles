@@ -50,18 +50,25 @@ class cellx:
 		pygame.draw.rect(self.screensurf, self.cellcolor, self.cellrect, 0)
 		pygame.draw.rect(self.screensurf, (0, 0, 0), self.cellrect, 1)
 		self.screensurf.blit(labx, (self.xcenter-(labx.get_width()//2), self.ypos+2))
+		#draw marbles
 		if self.count>=1:
 			pygame.draw.circle(self.screensurf, self.marcolor, self.mar1, self.marw)
+			pygame.draw.circle(self.screensurf, (0, 0, 0), self.mar1, self.marw, 1)
 		if self.count>=2:
 			pygame.draw.circle(self.screensurf, self.marcolor, self.mar2, self.marw)
+			pygame.draw.circle(self.screensurf, (0, 0, 0), self.mar2, self.marw, 1)
 		if self.count>=3:
 			pygame.draw.circle(self.screensurf, self.marcolor, self.mar3, self.marw)
+			pygame.draw.circle(self.screensurf, (0, 0, 0), self.mar3, self.marw, 1)
 		if self.count>=4:
 			pygame.draw.circle(self.screensurf, self.marcolor, self.mar4, self.marw)
+			pygame.draw.circle(self.screensurf, (0, 0, 0), self.mar4, self.marw, 1)
 		if self.count>=5:
 			pygame.draw.circle(self.screensurf, self.marcolor, self.mar5, self.marw)
+			pygame.draw.circle(self.screensurf, (0, 0, 0), self.mar5, self.marw, 1)
 		if self.count>=6:
 			pygame.draw.circle(self.screensurf, self.marcolor, self.mar6, self.marw)
+			pygame.draw.circle(self.screensurf, (0, 0, 0), self.mar6, self.marw, 1)
 	def click(self, event):
 		if self.cellrect.collidepoint(event.pos):
 			if event.button==1 or event.button==4:
